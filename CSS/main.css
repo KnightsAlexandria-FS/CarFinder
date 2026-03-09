@@ -1,0 +1,95 @@
+:root {
+  --primary-header: var(#ffffff);
+  --subtext-color: var(#d3d3d3);
+  --form-color: var(#f2f2f2);
+  --form--blue: var(#348fbc);
+  --form-disabled: var(#909090);
+  --selected-option-color: var(#212121);
+}
+
+body {
+  margin: 0;
+  background-image: url("../IMG/car-finder-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.searchcontainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  width: 700px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .inputgroup {
+    flex: 1;
+
+    .label {
+      color: var(--form--blue);
+    }
+  }
+
+  select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--subtext-color);
+    font-size: 15px;
+    background-color: white;
+
+    &disabled {
+      background-color: var(--form-disabled);
+    }
+  }
+}
+
+h1 {
+  color: #f2f2f2;
+  font-weight: 700;
+  justify-content: center;
+}
+p {
+  color: #f2f2f2;
+  font-size: 14px;
+}
+h2 {
+  font-family: open Sans;
+  color: var(--subtext-color);
+}
+
+.formpanel {
+  background-color: var(--form-color);
+  padding: 20px;
+  width: 400px;
+  margin: 100px auto;
+  border-radius: 8px;
+
+  select {
+    display: block;
+    color: var(--selected-option-color);
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    &:disabled {
+      background-color: var(--form-disabled);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .searchcontainer {
+    flex-direction: column;
+  }
+}
